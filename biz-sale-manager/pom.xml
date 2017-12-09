@@ -1,0 +1,44 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.bizsaas</groupId>
+		<artifactId>biz-sale-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>biz-sale-manager</artifactId>
+	<packaging>pom</packaging>
+	
+	<modules>
+		<module>biz-sale-domain</module>
+		<module>biz-sale-dao</module>
+		<module>biz-sale-service</module>
+		<module>biz-sale-interface</module>
+	</modules>
+
+	<!-- 后台管理系统的父工程：引入工具类坐标，其子工程就不需要引入了 -->
+	<dependencies>
+		<dependency>
+			<groupId>com.bizsaas</groupId>
+			<artifactId>biz-sale-utils</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>  
+	</dependencies>
+	<build>
+		<plugins>
+			<!-- 配置Tomcat插件 -->
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<!-- 定义项目发布路径，相当于直接放到tomcat的ROOT目录，在访问时不需要项目名称，直接访问路径就行 -->
+					<path>/</path>
+					<!-- 配置tomcat端口 -->
+					<port>8082</port>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
