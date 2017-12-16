@@ -23,7 +23,12 @@
 			<groupId>com.bizsaas</groupId>
 			<artifactId>biz-sale-utils</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-		</dependency>  
+		</dependency>
+		<dependency>
+			<groupId>com.bizsaas</groupId>
+			<artifactId>biz-sale-domain</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>

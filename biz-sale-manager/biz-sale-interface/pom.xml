@@ -21,10 +21,5 @@
 			<artifactId>pagehelper</artifactId>
 			<version>4.0.0</version>
 		</dependency>
-		<dependency>
-			<groupId>com.bizsaas</groupId>
-			<artifactId>biz-sale-domain</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
 	</dependencies>
 </project>
